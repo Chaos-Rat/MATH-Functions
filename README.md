@@ -17,5 +17,5 @@ Aprire il file [`MATH - Functions/src/Application.cpp`](https://github.com/ErPin
 ### Istruzioni per l'esecuzione
 
 - Se si utilizza Visual Studio, aprire direttamente il file della soluzione (`.sln`) o progetto (`.vcxproj`), e compilare.
-- Se si utilizza [Dev-C++](https://www.bloodshed.net/), creare un nuovo progetto, aggiungere tutti i file nella cartella [`MATH - Functions/src`](https://github.com/ErPincioNudo/MATH-Functions/blob/master/MATH%20-%20Functions/src), e compilare.
+- Se si utilizza [Dev-C++](https://www.bloodshed.net/), creare un nuovo progetto, aggiungere tutti i file nella cartella [`MATH - Functions/src`](https://github.com/ErPincioNudo/MATH-Functions/blob/master/MATH%20-%20Functions/src), e compilare ![Demonstration](/assets/gifs/devCpp.gif "Dev-C++ demonstratition").
 - Se si utilizza Mingw-w64, aprire il terminale di proprio piacimento (ex. cmd, powershell, bash), locarsi sulla cartella [`MATH - Functions/src`](https://github.com/ErPincioNudo/MATH-Functions/blob/master/MATH%20-%20Functions/src), digitare il comando `gcc -o Applicazione *.cpp` che dovrebbe compilare i file sorgente e generarare un eseguibile nella cartella, ed eseguire l'eseguibile appena generato.
