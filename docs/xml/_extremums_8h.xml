@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_extremums_8h" kind="file" language="C++">
+    <compoundname>Extremums.h</compoundname>
+    <includes local="no">ostream</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="_application_8cpp" local="yes">MATH - Functions/src/Application.cpp</includedby>
+    <includedby refid="_extremums_8cpp" local="yes">MATH - Functions/src/Extremums.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>MATH - Functions/src/Extremums.h</label>
+        <link refid="_extremums_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>limits</label>
+      </node>
+      <node id="2">
+        <label>ostream</label>
+      </node>
+      <node id="5">
+        <label>stdexcept</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>MATH - Functions/src/Application.cpp</label>
+        <link refid="_application_8cpp"/>
+      </node>
+      <node id="3">
+        <label>MATH - Functions/src/Extremums.cpp</label>
+        <link refid="_extremums_8cpp"/>
+      </node>
+      <node id="1">
+        <label>MATH - Functions/src/Extremums.h</label>
+        <link refid="_extremums_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_extremums" prot="public">Extremums</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_extremums_8h_1a4f5f6674a77781764692c84010f5244d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const Extremums &amp;extremums)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_extremums" kindref="compound">Extremums</ref> &amp;</type>
+          <declname>extremums</declname>
+        </param>
+        <briefdescription>
+<para>Overload for <computeroutput><ref refid="struct_extremums" kindref="compound">Extremums</ref></computeroutput> objects. Allows such objects to be output to an <computeroutput>std::ostream</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance of the stream to output to.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>extremums</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="struct_extremums" kindref="compound">Extremums</ref></computeroutput> instance to be output.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the <emphasis>stream</emphasis>  instance to which the <emphasis>extremums</emphasis>  instance has been output to.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MATH - Functions/src/Extremums.h" line="23" column="1" bodyfile="MATH - Functions/src/Extremums.cpp" bodystart="3" bodyend="7" declfile="MATH - Functions/src/Extremums.h" declline="23" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="_extremums_8h_1a6f45b97a69f9ade0e8bc50abcd077510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_extremums" kindref="compound">Extremums</ref></type>
+        <definition>Extremums extremums</definition>
+        <argsstring>(double(*function)(double x), double a, double b, std::uint64_t samples)</argsstring>
+        <name>extremums</name>
+        <param>
+          <type>double(*)(double x)</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>samples</declname>
+        </param>
+        <briefdescription>
+<para>Finds the maximum and minimum extremums of the given function, given a range [a, b] in which to search, and the number of samples to take. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function of which to find the extremums.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left side of the [a, b] search range.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right side of the [a, b] search range. Note that the real image of this side might not be considered, as the calculation of the step might generate a close (but not perfect) approximation, which might add up to a small, but present, relative error. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of equidistant samples to take from the [a, b] search range, + 1 (since it includes the left side of the range).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An <computeroutput><ref refid="struct_extremums" kindref="compound">Extremums</ref></computeroutput> object containing the found maximum and minimum extremums.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the left hand side of the [a, b] search range is &gt; the right side, or if the samples are = to 0. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MATH - Functions/src/Extremums.h" line="39" column="11" bodyfile="MATH - Functions/src/Extremums.cpp" bodystart="9" bodyend="39" declfile="MATH - Functions/src/Extremums.h" declline="39" declcolumn="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="struct_extremums" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_extremums" kindref="compound">Extremums</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14" refid="struct_extremums_1a0c630dc5a3e234d7fd78def520406f75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_extremums_1a0c630dc5a3e234d7fd78def520406f75" kindref="member">max</ref>,<sp/><ref refid="struct_extremums_1add44009eb26f4542fe78f038de7cf345" kindref="member">min</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">std::ostream&amp;<sp/><ref refid="_extremums_8h_1a4f5f6674a77781764692c84010f5244d" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_extremums" kindref="compound">Extremums</ref>&amp;<sp/><ref refid="_extremums_8h_1a6f45b97a69f9ade0e8bc50abcd077510" kindref="member">extremums</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="struct_extremums" kindref="compound">Extremums</ref><sp/><ref refid="_extremums_8h_1a6f45b97a69f9ade0e8bc50abcd077510" kindref="member">extremums</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">(*function)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b,<sp/>std::uint64_t<sp/>samples);</highlight></codeline>
+    </programlisting>
+    <location file="MATH - Functions/src/Extremums.h"/>
+  </compounddef>
+</doxygen>

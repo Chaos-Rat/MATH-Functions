@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_intersect_8h" kind="file" language="C++">
+    <compoundname>Intersect.h</compoundname>
+    <includes local="no">cmath</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="_application_8cpp" local="yes">MATH - Functions/src/Application.cpp</includedby>
+    <includedby refid="_intersect_8cpp" local="yes">MATH - Functions/src/Intersect.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>MATH - Functions/src/Intersect.h</label>
+        <link refid="_intersect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>stdexcept</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>MATH - Functions/src/Application.cpp</label>
+        <link refid="_application_8cpp"/>
+      </node>
+      <node id="3">
+        <label>MATH - Functions/src/Intersect.cpp</label>
+        <link refid="_intersect_8cpp"/>
+      </node>
+      <node id="1">
+        <label>MATH - Functions/src/Intersect.h</label>
+        <link refid="_intersect_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_intersect_8h_1a5c20c4fc9e2e422f320fee972d43e56a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double intersect</definition>
+        <argsstring>(double(*function)(double x), double a, double b, double error)</argsstring>
+        <name>intersect</name>
+        <param>
+          <type>double(*)(double x)</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Finds one x coordinate of the given function which results in an intersection with the x axis (y = 0), given a range [a, b] in which to search, and an absolute error for the result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function of which to find the intersection with the x axis (y = 0).</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left side of the [a, b] search range.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right side of the [a, b] search range.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Absolute error of the result (result ± error).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The x coordinate found, ± the error given.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If left hand side of the search range is &gt; the right one, if the images of the sides of the search range have the same sign, or if the absolute error is &lt;= 0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MATH - Functions/src/Intersect.h" line="19" column="8" bodyfile="MATH - Functions/src/Intersect.cpp" bodystart="3" bodyend="43" declfile="MATH - Functions/src/Intersect.h" declline="19" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_intersect_8h_1a5c20c4fc9e2e422f320fee972d43e56a" kindref="member">intersect</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">(*function)(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x),<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>error);</highlight></codeline>
+    </programlisting>
+    <location file="MATH - Functions/src/Intersect.h"/>
+  </compounddef>
+</doxygen>

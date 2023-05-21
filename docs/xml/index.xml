@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
+  <compound refid="struct_extremums" kind="struct"><name>Extremums</name>
+    <member refid="struct_extremums_1a0c630dc5a3e234d7fd78def520406f75" kind="variable"><name>max</name></member>
+    <member refid="struct_extremums_1add44009eb26f4542fe78f038de7cf345" kind="variable"><name>min</name></member>
+  </compound>
+  <compound refid="_application_8cpp" kind="file"><name>Application.cpp</name>
+    <member refid="_application_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_extremums_8cpp" kind="file"><name>Extremums.cpp</name>
+    <member refid="_extremums_8cpp_1a4f5f6674a77781764692c84010f5244d" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="_extremums_8cpp_1a6f45b97a69f9ade0e8bc50abcd077510" kind="function"><name>extremums</name></member>
+  </compound>
+  <compound refid="_extremums_8h" kind="file"><name>Extremums.h</name>
+    <member refid="_extremums_8h_1a4f5f6674a77781764692c84010f5244d" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="_extremums_8h_1a6f45b97a69f9ade0e8bc50abcd077510" kind="function"><name>extremums</name></member>
+  </compound>
+  <compound refid="_intersect_8cpp" kind="file"><name>Intersect.cpp</name>
+    <member refid="_intersect_8cpp_1a5c20c4fc9e2e422f320fee972d43e56a" kind="function"><name>intersect</name></member>
+  </compound>
+  <compound refid="_intersect_8h" kind="file"><name>Intersect.h</name>
+    <member refid="_intersect_8h_1a5c20c4fc9e2e422f320fee972d43e56a" kind="function"><name>intersect</name></member>
+  </compound>
+  <compound refid="dir_41b32e1988c857b444f03f9ae7d1ef75" kind="dir"><name>MATH - Functions</name>
+  </compound>
+  <compound refid="dir_40381397ce9b0120f7ff181bc7e48e8f" kind="dir"><name>MATH - Functions/src</name>
+  </compound>
+</doxygenindex>

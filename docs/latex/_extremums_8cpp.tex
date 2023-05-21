@@ -1,0 +1,70 @@
+\hypertarget{_extremums_8cpp}{}\doxysection{MATH -\/ Functions/src/\+Extremums.cpp File Reference}
+\label{_extremums_8cpp}\index{MATH -\/ Functions/src/Extremums.cpp@{MATH -\/ Functions/src/Extremums.cpp}}
+{\ttfamily \#include \char`\"{}Extremums.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_extremums_8cpp_a4f5f6674a77781764692c84010f5244d}{operator$<$$<$}} (std\+::ostream \&stream, const \mbox{\hyperlink{struct_extremums}{Extremums}} \&\mbox{\hyperlink{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}{extremums}})
+\begin{DoxyCompactList}\small\item\em Overload for {\ttfamily \mbox{\hyperlink{struct_extremums}{Extremums}}} objects. Allows such objects to be output to an {\ttfamily std\+::ostream}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_extremums}{Extremums}} \mbox{\hyperlink{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}{extremums}} (double($\ast$function)(double x), double a, double b, std\+::uint64\+\_\+t samples)
+\begin{DoxyCompactList}\small\item\em Finds the maximum and minimum extremums of the given function, given a range \mbox{[}a, b\mbox{]} in which to search, and the number of samples to take. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}\label{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}} 
+\index{Extremums.cpp@{Extremums.cpp}!extremums@{extremums}}
+\index{extremums@{extremums}!Extremums.cpp@{Extremums.cpp}}
+\doxysubsubsection{\texorpdfstring{extremums()}{extremums()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_extremums}{Extremums}} extremums (\begin{DoxyParamCaption}\item[{double($\ast$)(double x)}]{function,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{std\+::uint64\+\_\+t}]{samples }\end{DoxyParamCaption})}
+
+
+
+Finds the maximum and minimum extremums of the given function, given a range \mbox{[}a, b\mbox{]} in which to search, and the number of samples to take. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The function of which to find the extremums.\\
+\hline
+{\em a} & Left side of the \mbox{[}a, b\mbox{]} search range.\\
+\hline
+{\em b} & Right side of the \mbox{[}a, b\mbox{]} search range. Note that the real image of this side might not be considered, as the calculation of the step might generate a close (but not perfect) approximation, which might add up to a small, but present, relative error. \\
+\hline
+{\em samples} & Number of equidistant samples to take from the \mbox{[}a, b\mbox{]} search range, + 1 (since it includes the left side of the range).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An {\ttfamily \mbox{\hyperlink{struct_extremums}{Extremums}}} object containing the found maximum and minimum extremums.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & If the left hand side of the \mbox{[}a, b\mbox{]} search range is \texorpdfstring{$>$}{>} the right side, or if the samples are = to 0. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_extremums_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_extremums_8cpp_source}{Extremums.\+cpp}}.
+
+\mbox{\Hypertarget{_extremums_8cpp_a4f5f6674a77781764692c84010f5244d}\label{_extremums_8cpp_a4f5f6674a77781764692c84010f5244d}} 
+\index{Extremums.cpp@{Extremums.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Extremums.cpp@{Extremums.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \mbox{\hyperlink{struct_extremums}{Extremums}} \&}]{extremums }\end{DoxyParamCaption})}
+
+
+
+Overload for {\ttfamily \mbox{\hyperlink{struct_extremums}{Extremums}}} objects. Allows such objects to be output to an {\ttfamily std\+::ostream}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stream} & Instance of the stream to output to.\\
+\hline
+{\em extremums} & {\ttfamily \mbox{\hyperlink{struct_extremums}{Extremums}}} instance to be output.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the {\itshape stream}  instance to which the {\itshape extremums}  instance has been output to.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_extremums_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_extremums_8cpp_source}{Extremums.\+cpp}}.
+

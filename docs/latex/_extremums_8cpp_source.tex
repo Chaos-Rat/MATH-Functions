@@ -1,0 +1,45 @@
+\hypertarget{_extremums_8cpp_source}{}\doxysection{Extremums.\+cpp}
+\label{_extremums_8cpp_source}\index{MATH -\/ Functions/src/Extremums.cpp@{MATH -\/ Functions/src/Extremums.cpp}}
+\mbox{\hyperlink{_extremums_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_extremums_8h}{Extremums.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00003}\mbox{\hyperlink{_extremums_8cpp_a4f5f6674a77781764692c84010f5244d}{00003}}\ std::ostream\&\ \mbox{\hyperlink{_extremums_8cpp_a4f5f6674a77781764692c84010f5244d}{operator<<}}(std::ostream\&\ stream,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_extremums}{Extremums}}\&\ \mbox{\hyperlink{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}{extremums}})}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00005}00005\ \ \ \ \ stream\ <<\ \textcolor{stringliteral}{"{}Max:\ "{}}\ <<\ \mbox{\hyperlink{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}{extremums}}.\mbox{\hyperlink{struct_extremums_a0c630dc5a3e234d7fd78def520406f75}{max}}\ <<\ \textcolor{stringliteral}{"{},\ Min:\ "{}}\ <<\ \mbox{\hyperlink{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}{extremums}}.\mbox{\hyperlink{struct_extremums_add44009eb26f4542fe78f038de7cf345}{min}};}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordflow}{return}\ stream;}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00009}\mbox{\hyperlink{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}{00009}}\ \mbox{\hyperlink{struct_extremums}{Extremums}}\ \mbox{\hyperlink{_extremums_8cpp_a6f45b97a69f9ade0e8bc50abcd077510}{extremums}}(\textcolor{keywordtype}{double}(*function)(\textcolor{keywordtype}{double}\ x),\ \textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,\ std::uint64\_t\ samples)}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (a\ >\ b)}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Invalid\ range:\ the\ left\ hand\ side\ is\ greater\ than\ the\ right\ one!"{}});}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{if}\ (samples\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}The\ number\ of\ samples\ needs\ to\ be\ >\ 0!"{}});}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{if}\ (a\ ==\ b)}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ image\ =\ function(a);}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ image,\ image\ \};}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{double}\ step\ =\ (b\ -\/\ a)\ /\ samples;}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{double}\ image;}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{double}\ max\ =\ std::numeric\_limits<double>::lowest(),\ min\ =\ std::numeric\_limits<double>::max();}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::uint64\_t\ i\ =\ 0;\ i\ <\ samples\ +\ 1;\ i++)\ \textcolor{comment}{//\ +\ 1\ for\ the\ right\ side\ of\ the\ range\ (since\ we\ start\ from\ 0)}}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ image\ =\ function(a);}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (image\ >\ max)}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ max\ =\ image;}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (image\ <\ min)}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ image;}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ a\ +=\ step;}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{return}\ \{\ max,\ min\ \};}
+\DoxyCodeLine{\Hypertarget{_extremums_8cpp_source_l00039}00039\ \}}
+
+\end{DoxyCode}

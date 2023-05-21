@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_41b32e1988c857b444f03f9ae7d1ef75" kind="dir">
+    <compoundname>MATH - Functions</compoundname>
+    <innerdir refid="dir_40381397ce9b0120f7ff181bc7e48e8f">MATH - Functions/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="MATH - Functions/"/>
+  </compounddef>
+</doxygen>

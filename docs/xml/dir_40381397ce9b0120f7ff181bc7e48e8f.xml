@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_40381397ce9b0120f7ff181bc7e48e8f" kind="dir">
+    <compoundname>MATH - Functions/src</compoundname>
+    <innerfile refid="_application_8cpp">Application.cpp</innerfile>
+    <innerfile refid="_extremums_8cpp">Extremums.cpp</innerfile>
+    <innerfile refid="_extremums_8h">Extremums.h</innerfile>
+    <innerfile refid="_intersect_8cpp">Intersect.cpp</innerfile>
+    <innerfile refid="_intersect_8h">Intersect.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="MATH - Functions/src/"/>
+  </compounddef>
+</doxygen>

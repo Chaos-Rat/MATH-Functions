@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="struct_extremums" kind="struct" language="C++" prot="public">
+    <compoundname>Extremums</compoundname>
+    <includes refid="_extremums_8h" local="no">Extremums.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_extremums_1a0c630dc5a3e234d7fd78def520406f75" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Extremums::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>Extremums::max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MATH - Functions/src/Extremums.h" line="14" column="8" bodyfile="MATH - Functions/src/Extremums.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_extremums_1add44009eb26f4542fe78f038de7cf345" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Extremums::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <qualifiedname>Extremums::min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="MATH - Functions/src/Extremums.h" line="14" column="12" bodyfile="MATH - Functions/src/Extremums.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="struct_extremums" kindref="compound">Extremums</ref> structure. Holds two members of type double: max and min. Used as return type for the <computeroutput>extremums</computeroutput> function. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="MATH - Functions/src/Extremums.h" line="12" column="1" bodyfile="MATH - Functions/src/Extremums.h" bodystart="13" bodyend="15"/>
+    <listofallmembers>
+      <member refid="struct_extremums_1a0c630dc5a3e234d7fd78def520406f75" prot="public" virt="non-virtual"><scope>Extremums</scope><name>max</name></member>
+      <member refid="struct_extremums_1add44009eb26f4542fe78f038de7cf345" prot="public" virt="non-virtual"><scope>Extremums</scope><name>min</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

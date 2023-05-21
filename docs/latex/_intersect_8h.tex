@@ -1,0 +1,46 @@
+\hypertarget{_intersect_8h}{}\doxysection{MATH -\/ Functions/src/\+Intersect.h File Reference}
+\label{_intersect_8h}\index{MATH -\/ Functions/src/Intersect.h@{MATH -\/ Functions/src/Intersect.h}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_intersect_8h_a5c20c4fc9e2e422f320fee972d43e56a}{intersect}} (double($\ast$function)(double x), double a, double b, double error)
+\begin{DoxyCompactList}\small\item\em Finds one x coordinate of the given function which results in an intersection with the x axis (y = 0), given a range \mbox{[}a, b\mbox{]} in which to search, and an absolute error for the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_intersect_8h_a5c20c4fc9e2e422f320fee972d43e56a}\label{_intersect_8h_a5c20c4fc9e2e422f320fee972d43e56a}} 
+\index{Intersect.h@{Intersect.h}!intersect@{intersect}}
+\index{intersect@{intersect}!Intersect.h@{Intersect.h}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily double intersect (\begin{DoxyParamCaption}\item[{double($\ast$)(double x)}]{function,  }\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{error }\end{DoxyParamCaption})}
+
+
+
+Finds one x coordinate of the given function which results in an intersection with the x axis (y = 0), given a range \mbox{[}a, b\mbox{]} in which to search, and an absolute error for the result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The function of which to find the intersection with the x axis (y = 0).\\
+\hline
+{\em a} & Left side of the \mbox{[}a, b\mbox{]} search range.\\
+\hline
+{\em b} & Right side of the \mbox{[}a, b\mbox{]} search range.\\
+\hline
+{\em error} & Absolute error of the result (result ± error).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The x coordinate found, ± the error given.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & If left hand side of the search range is \texorpdfstring{$>$}{>} the right one, if the images of the sides of the search range have the same sign, or if the absolute error is \texorpdfstring{$<$}{<}= 0 \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line \mbox{\hyperlink{_intersect_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_intersect_8cpp_source}{Intersect.\+cpp}}.
+
