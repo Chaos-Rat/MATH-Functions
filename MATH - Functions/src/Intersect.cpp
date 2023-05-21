@@ -22,7 +22,7 @@ double intersect(double(*function)(double x), double a, double b, double error)
 	if (images[1] == 0)
 		return b;
 	
-	std::uint64_t iterations = (std::uint32_t)(std::log2((b - a) / (error * 2)) + 1); // magic formula (estimated minimum number of excecutions to get the desired precision)
+	std::uint64_t iterations = (std::uint64_t)(std::log2((b - a) / (error * 2)) + 1); // magic formula (estimated minimum number of excecutions to get the desired precision)
 	std::int8_t monotony = images[0] < 0 ? 1 : -1; // if the first image is negative it means that the function (inside the range) goes from - to + and vice versa
 
 	double c;
