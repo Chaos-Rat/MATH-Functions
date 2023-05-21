@@ -20,12 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application.cpp" />
-    <ClCompile Include="src\Extremities.cpp" />
     <ClCompile Include="src\Extremums.cpp" />
     <ClCompile Include="src\Intersect.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Extremities.h" />
     <ClInclude Include="src\Extremums.h" />
     <ClInclude Include="src\Intersect.h" />
   </ItemGroup>
