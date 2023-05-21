@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 
 #include "Intersect.h"
 #include "Extremums.h"
@@ -13,5 +14,5 @@ int main()
 	std::cout << "Intersect: " << intersect(intersectFunction, -5, 0, 0.001) << std::endl;
 	std::cout << extremums(extremumsFunction, 0, 15, 1000) << std::endl;
 	
-	std::cin.get();
+	std::system("pause");
 }
