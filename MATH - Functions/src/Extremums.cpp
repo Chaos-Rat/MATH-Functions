@@ -8,28 +8,32 @@ std::ostream& operator<<(std::ostream& stream, const Extremums& extremums)
 
 Extremums extremums(double(*function)(double x), double a, double b, std::uint64_t samples)
 {
+	if (a > b)
+		throw std::invalid_argument("Invalid range: the left hand side is greater than the right one!");
 	if (samples == 0)
 		throw std::invalid_argument("The number of samples needs to be > 0!");
-
-	double max = std::numeric_limits<double>::max(), min = std::numeric_limits<double>::lowest();
 
 	if (a == b)
 	{
 		double image = function(a);
-		return Extremums(image, image);
+		return { image, image };
 	}
 
-	if (a > b)
+	double step = (b - a) / samples;
+	double image;
+	double max = std::numeric_limits<double>::lowest(), min = std::numeric_limits<double>::max();
+
+	for (std::uint64_t i = 0; i < samples + 1; i++) // + 1 for the right side of the range (since we start from 0)
 	{
-		double temp = a;
-		a = b;
-		b = temp;
+		image = function(a);
+
+		if (image > max)
+			max = image;
+		if (image < min)
+			min = image;
+
+		a += step;
 	}
 
-	double step = b - a;
-
-	for (std::uint64_t i = 0; i < samples; i++)
-	{
-		+
-	}
+	return { max, min };
 }

@@ -2,18 +2,13 @@
 
 double intersect(double(*function)(double x), double a, double b, double error)
 {
-	if (a > b) // a needs to be < b
-	{
-		double temp = a;
-		a = b;
-		b = temp;
-	}
+	if (a > b)
+		throw std::invalid_argument("Invalid range: the left hand side is greater than the right one!");
 
 	double images[2] = { function(a), function(b) };
 	
 	if (images[0] * images[1] > 0)
-		throw std::invalid_argument("The range extremities have the same sign!");
-
+		throw std::invalid_argument("Invalid range: the images of the sides have the same sign!");
 	if (error <= 0)
 		throw std::invalid_argument("The error of the result should be > 0!");
 
@@ -28,7 +23,7 @@ double intersect(double(*function)(double x), double a, double b, double error)
 	double c;
 	double image;
 
-	for (std::uint32_t i = 0; i < iterations; i++)
+	for (std::uint64_t i = 0; i < iterations; i++)
 	{
 		c = a + ((b - a) / 2); // no need for std::abs(a - b) because b is always > a
 		image = function(c);

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include <numbers>
 
 #include "Intersect.h"
 #include "Extremums.h"
@@ -8,7 +7,11 @@
 
 int main()
 {
-	std::cout << "Intersect: " << intersect([](double x) { return std::exp(x) - std::sin(x); }, 0, 13, 0.001) << std::endl;
-	Extremums result = extremums([](double x) { return std::log(x) * std::sin(x); }, 0, 13, 1000);
+	auto intersectFunction = [](double x) { return std::exp(x) - std::sin(x); }; // e^x - sin(x)
+	auto extremumsFunction = [](double x) { return std::log(x) * std::sin(x); }; // ln(x) * sin(x)
+	
+	std::cout << "Intersect: " << intersect(intersectFunction, -5, 0, 0.001) << std::endl;
+	std::cout << extremums(extremumsFunction, 0, 15, 1000) << std::endl;
+	
 	std::cin.get();
 }

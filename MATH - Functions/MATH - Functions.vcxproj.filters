@@ -21,18 +21,12 @@
     <ClCompile Include="src\Intersect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Extremities.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Extremums.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Intersect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Extremities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Extremums.h">
